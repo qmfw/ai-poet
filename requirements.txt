@@ -1,4 +1,7 @@
-langchain-core
+langchain
 langchain-openai
-OpenAI
-streamlit
+openai
+pypdf
+chromadb
+tiktoken
+streamlit-extras
