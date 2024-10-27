@@ -4,7 +4,7 @@
 # load_dotenv()
 
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 
 chat_model = ChatOpenAI()
 
@@ -14,5 +14,5 @@ content = st.text_input('시의 주제를 제시해주세요.')
 
 if st.button('시 작성 요청하기'):
     with st.spinner('시 작성 중...'):
-        result = chat_model.predict(content + "에 대한 시를 써줘")
+        result = chat_model.invoke(content + "에 대한 시를 써줘").content
         st.write(result)
